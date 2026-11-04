@@ -14,6 +14,24 @@
 
 Un système de Machine Learning ajuste des paramètres à partir d’exemples pour une tâche définie. Deep Learning désigne une famille de modèles fondés sur des réseaux de neurones à plusieurs couches ; ce n’est pas synonyme de toute l’AI. Data Science couvre également la collecte, l’exploration, la communication et la décision à partir des données.
 
+## Supports visuels
+
+Les images de ce dossier servent de repères avant l’exécution des notebooks. Elles sont utilisées comme supports pédagogiques, tandis que les figures produites par le code restent reproductibles dans les notebooks.
+
+![Introduction à l’AI, au Machine Learning et au Deep Learning](images/01-ai-ml-dl-overview.png)
+
+![Installation de Python et préparation de l’environnement](images/02-python-environment.png)
+
+![Git, GitHub et travail avec les notebooks](images/03-git-github-notebooks.png)
+
+![Comparaison entre CPU et GPU](images/04-cpu-vs-gpu.png)
+
+![Cycle général d’un projet Machine Learning](images/05-ml-lifecycle.png)
+
+![Rôles des ensembles train, validation et test](images/06-train-validation-test.png)
+
+![Différence entre entraînement et prédiction](images/07-training-inference.png)
+
 ```mermaid
 flowchart LR
   A[Question et données] --> B[Auditer]
