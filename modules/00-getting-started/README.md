@@ -16,21 +16,17 @@ Un système de Machine Learning ajuste des paramètres à partir d’exemples po
 
 ## Supports visuels
 
-Les images de ce dossier servent de repères avant l’exécution des notebooks. Elles sont utilisées comme supports pédagogiques, tandis que les figures produites par le code restent reproductibles dans les notebooks.
+Les images de ce dossier sont affichées une seule fois dans le notebook afin de garder le cours lisible. Le README fournit seulement leur index ; les figures produites par le code restent reproductibles dans le notebook.
 
-![Introduction à l’AI, au Machine Learning et au Deep Learning](images/01-ai-ml-dl-overview.png)
-
-![Installation de Python et préparation de l’environnement](images/02-python-environment.png)
-
-![Git, GitHub et travail avec les notebooks](images/03-git-github-notebooks.png)
-
-![Comparaison entre CPU et GPU](images/04-cpu-vs-gpu.png)
-
-![Cycle général d’un projet Machine Learning](images/05-ml-lifecycle.png)
-
-![Rôles des ensembles train, validation et test](images/06-train-validation-test.png)
-
-![Différence entre entraînement et prédiction](images/07-training-inference.png)
+| Support | Rôle dans le cours |
+|---|---|
+| [AI, ML et Deep Learning](images/01-ai-ml-dl-overview.png) | Situer les trois notions |
+| [Environnement Python](images/02-python-environment.png) | Installer et isoler les dépendances |
+| [Git, GitHub et notebooks](images/03-git-github-notebooks.png) | Versionner et documenter les expériences |
+| [CPU et GPU](images/04-cpu-vs-gpu.png) | Choisir le matériel adapté |
+| [Cycle ML](images/05-ml-lifecycle.png) | Relier problème, données, modèle et monitoring |
+| [Train, validation et test](images/06-train-validation-test.png) | Comprendre les trois usages des données |
+| [Entraînement et inférence](images/07-training-inference.png) | Distinguer `fit` et `predict` |
 
 ```mermaid
 flowchart LR
