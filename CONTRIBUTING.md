@@ -8,7 +8,7 @@ Merci de proposer des corrections, exemples ou leçons. Le dépôt est pédagogi
 2. Créer une branche courte depuis la version à jour, par exemple `lesson/precision-recall` ou `fix/pipeline-leakage`.
 3. Faire un changement limité et documenter les choix. Ne pas ajouter de données ou de poids de modèle volumineux.
 4. Exécuter les vérifications : `python -m pytest`, `ruff check src tests scripts`, `ruff format --check src tests scripts`, `python scripts/validate_notebooks.py` et `python scripts/validate_links.py`.
-5. Pour un notebook, redémarrer le noyau, exécuter toutes les cellules depuis la racine, effacer les sorties inutiles et vérifier les liens/chemins.
+5. Pour un notebook, redémarrer le noyau, exécuter toutes les cellules depuis la racine, vérifier les liens et chemins, puis conserver uniquement les figures pédagogiques reproductibles dans le `.ipynb`. Supprimer les sorties texte et les figures fondées sur Reuters.
 6. Ouvrir une pull request avec le modèle fourni : objectifs, changements, vérifications, limites connues.
 
 ## Conventions
@@ -27,4 +27,4 @@ Indiquer le prérequis, le résultat observable et la durée estimée. Relier in
 
 ## Revue du contenu
 
-La personne qui relit vérifie la cohérence de la notation et des formes, les hypothèses, l’absence de fuite de données, les usages de métriques, la licence des matériaux, l’accessibilité des figures et les commandes de reproduction. Toute affirmation de performance doit préciser jeu de données, split, métrique et graine. Exécuter `python scripts/validate_notebooks.py --execute --path chemin/du/notebook.ipynb` depuis la racine ; la commande n’enregistre pas les sorties. Ne pas committer de texte Reuters généré dans les sorties des TP NLP historiques.
+La personne qui relit vérifie la cohérence de la notation et des formes, les hypothèses, l’absence de fuite de données, les usages de métriques, la licence des matériaux, l’accessibilité des figures et les commandes de reproduction. Toute affirmation de performance doit préciser jeu de données, split, métrique et graine. Exécuter `python scripts/validate_notebooks.py --execute --path chemin/du/notebook.ipynb` depuis la racine ; la commande ne modifie pas le fichier. Pour mettre à jour les figures conservées dans un notebook, utiliser `python scripts/validate_notebooks.py --execute --save-figures --path chemin/du/notebook.ipynb`. Cette option conserve les figures issues de données synthétiques ou intégrées et supprime les sorties texte ; les figures fondées sur Reuters doivent aussi être supprimées avant commit. Vérifier visuellement les figures enregistrées sur GitHub.

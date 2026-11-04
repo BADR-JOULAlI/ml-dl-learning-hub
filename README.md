@@ -95,7 +95,7 @@ Les exercices sont séparés des solutions et répartis par niveau sous [`exerci
 
 Depuis la racine du dépôt, lancer `jupyter lab`, puis ouvrir le notebook ciblé. Les chemins relatifs sont calculés depuis la racine. Les notebooks des modules 01 à 05 et le notebook MLOps local n’ont besoin que des dépendances de base. Les modules PyTorch nécessitent le groupe `dl`. Les deux TP NLP historiques nécessitent `nlp` et téléchargent des corpus NLTK, dont Reuters-21578 avec ses propres conditions d’usage. Une alternative Colab est documentée dans le guide de démarrage ; aucun compte payant ni secret n’est requis.
 
-Pour exécuter tous les notebooks depuis un terminal, installer `.[dev,dl,nlp]`, puis lancer `python scripts/validate_notebooks.py --execute`. Les sorties d’exécution ne sont pas écrites dans les fichiers `.ipynb`, notamment celles du corpus Reuters.
+Pour exécuter tous les notebooks depuis un terminal, installer `.[dev,dl,nlp]`, puis lancer `python scripts/validate_notebooks.py --execute`. Cette commande exécute sans modifier les fichiers. Les **28 notebooks** ont été exécutés de la première à la dernière cellule sur CPU avec Python 3.12. Les figures explicatives issues de données synthétiques ou de jeux intégrés sont enregistrées dans les `.ipynb` et visibles directement sur GitHub. Pour les recalculer et enregistrer uniquement les figures, lancer `python scripts/validate_notebooks.py --execute --save-figures`. Les sorties texte et les figures fondées sur le corpus Reuters sont supprimées avant publication.
 
 ## Contribuer
 
