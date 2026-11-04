@@ -1,6 +1,12 @@
 # Schémas originaux du parcours
 
-Les diagrammes sont écrits en Mermaid pour pouvoir être révisés avec le cours et rester lisibles sans image binaire. Ils sont simplifiés pour l’enseignement ; les axes ou paramètres absents sont explicités dans les leçons.
+Les diagrammes sont écrits en Mermaid ou SVG pour pouvoir être révisés avec le cours et rester lisibles sans image binaire. Ils sont simplifiés pour l’enseignement ; les axes ou paramètres absents sont explicités dans les leçons.
+
+## Cycle complet d'un projet ML
+
+![Schéma original du cycle ML, du cadrage à la surveillance avec retour vers une nouvelle expérience](ml_pipeline.svg)
+
+Le parcours général s'inspire des étapes décrites dans [Machine Learning Pipeline de GeeksforGeeks](https://www.geeksforgeeks.org/blogs/machine-learning-pipeline/). Le schéma et son texte sont originaux. Le [notebook d'introduction](../../modules/00-getting-started/01_ml_pipeline.ipynb) fait manipuler ces étapes. La séparation précède tout `fit` de transformation ; la [documentation scikit-learn](https://scikit-learn.org/stable/common_pitfalls.html#data-leakage) explique pourquoi. Une pipeline logicielle `scikit-learn` couvre surtout les transformations et le modèle : la collecte, le test final, le service et le monitoring exigent d'autres composants.
 
 ## Préparation et séparation
 

@@ -4,6 +4,10 @@ Un parcours francophone, pratique et progressif pour comprendre les systèmes de
 
 Le dépôt combine cours, notebooks, exercices et petits projets. Le chemin débutant (`modules/01` à `modules/05`) est le premier parcours complet et exécutable. Les modules avancés sont en cours d’extension ; leur état réel est suivi dans [`docs/implementation-status.md`](docs/implementation-status.md).
 
+![Schéma original du cycle complet d'un projet de machine learning : cadrage, collecte, séparation, préparation, entraînement, test, déploiement et surveillance](assets/diagrams/ml_pipeline.svg)
+
+Commencer par le [notebook interactif du pipeline ML](modules/00-getting-started/01_ml_pipeline.ipynb), puis approfondir la séparation des données et le preprocessing dans le module 03. Le [schéma détaillé](assets/diagrams/README.md) relie les étapes à leurs limites.
+
 ## Objectifs pédagogiques
 
 - Relier intuition, équations, code, visualisation et interprétation.
@@ -65,7 +69,7 @@ Les notebooks expliquent les objectifs, l’intuition, les équations, les forme
 
 | Module | Sujet | Ressource principale |
 |---|---|---|
-| 00 | Installation, Git, notebooks, CPU/GPU | [Guide](modules/00-getting-started/README.md) |
+| 00 | Installation, Git, notebooks, CPU/GPU et pipeline ML | [Guide](modules/00-getting-started/README.md) · [Pipeline illustré](modules/00-getting-started/01_ml_pipeline.ipynb) |
 | 01 | Python, NumPy, Pandas et graphiques | [Cours](modules/01-python-for-data-science/README.md) · [Notebook](modules/01-python-for-data-science/01_numpy_pandas.ipynb) |
 | 02 | Vecteurs, probabilités, dérivées, gradient descent | [Cours](modules/02-math-for-ml/README.md) · [Algèbre](modules/02-math-for-ml/02_linear_algebra_probability.ipynb) · [Gradient](modules/02-math-for-ml/01_gradient_descent.ipynb) |
 | 03 | EDA, qualité, valeurs manquantes, encodage, fuite | [Cours](modules/03-data-preprocessing/README.md) · [Pipeline](modules/03-data-preprocessing/01_pipeline_sans_fuite.ipynb) · [Qualité et features](modules/03-data-preprocessing/02_quality_and_features.ipynb) |
@@ -95,7 +99,7 @@ Les exercices sont séparés des solutions et répartis par niveau sous [`exerci
 
 Depuis la racine du dépôt, lancer `jupyter lab`, puis ouvrir le notebook ciblé. Les chemins relatifs sont calculés depuis la racine. Les notebooks des modules 01 à 05 et le notebook MLOps local n’ont besoin que des dépendances de base. Les modules PyTorch nécessitent le groupe `dl`. Les deux TP NLP historiques nécessitent `nlp` et téléchargent des corpus NLTK, dont Reuters-21578 avec ses propres conditions d’usage. Une alternative Colab est documentée dans le guide de démarrage ; aucun compte payant ni secret n’est requis.
 
-Pour exécuter tous les notebooks depuis un terminal, installer `.[dev,dl,nlp]`, puis lancer `python scripts/validate_notebooks.py --execute`. Cette commande exécute sans modifier les fichiers. Les **28 notebooks** ont été exécutés de la première à la dernière cellule sur CPU avec Python 3.12. Les figures explicatives issues de données synthétiques ou de jeux intégrés sont enregistrées dans les `.ipynb` et visibles directement sur GitHub. Pour les recalculer et enregistrer uniquement les figures, lancer `python scripts/validate_notebooks.py --execute --save-figures`. Les sorties texte et les figures fondées sur le corpus Reuters sont supprimées avant publication.
+Pour exécuter tous les notebooks depuis un terminal, installer `.[dev,dl,nlp]`, puis lancer `python scripts/validate_notebooks.py --execute`. Cette commande exécute sans modifier les fichiers. Les **29 notebooks** ont été exécutés de la première à la dernière cellule sur CPU avec Python 3.12. Leurs **69 figures explicatives** issues de données synthétiques ou de jeux intégrés sont enregistrées dans les `.ipynb` et visibles directement sur GitHub. Pour les recalculer et enregistrer uniquement les figures, lancer `python scripts/validate_notebooks.py --execute --save-figures`. Les sorties texte et les figures fondées sur le corpus Reuters sont supprimées avant publication.
 
 ## Contribuer
 
@@ -103,7 +107,7 @@ Les contributions sont les bienvenues en français ou en anglais. Lire [CONTRIBU
 
 ## Références pédagogiques
 
-Ce dépôt est original. Il s’inspire des approches pédagogiques publiques des projets listés dans [docs/references.md](docs/references.md), sans copier leurs notebooks, textes ou figures. Attribution, licences observées et limites de réutilisation y sont détaillées.
+Ce dépôt est original. Il s’inspire des approches pédagogiques publiques des projets et du parcours GeeksforGeeks listés dans [docs/references.md](docs/references.md), sans copier leurs notebooks, textes ou figures. Attribution, licences observées et limites de réutilisation y sont détaillées.
 
 Les [diagrammes pédagogiques](assets/diagrams/README.md) sont maintenus comme Mermaid source.
 

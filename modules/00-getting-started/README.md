@@ -8,6 +8,7 @@
 - Créer un environnement Python isolé et lancer un notebook local ou dans Colab.
 - Utiliser `git status`, une branche et un commit pour retrouver son travail.
 - Choisir CPU ou GPU selon le coût pratique de l’expérience.
+- Suivre un projet ML de la collecte à la surveillance et distinguer ce parcours d’un objet `Pipeline` scikit-learn.
 
 ## Concepts
 
@@ -15,12 +16,13 @@ Un système de Machine Learning ajuste des paramètres à partir d’exemples po
 
 ```mermaid
 flowchart LR
-  A[Question et données] --> B[Préparer et séparer]
-  B --> C[Entraîner]
-  C --> D[Évaluer sur données inédites]
-  D --> E{Utile et assez fiable ?}
-  E -- non --> B
-  E -- oui --> F[Déployer et surveiller]
+  A[Question et données] --> B[Auditer]
+  B --> C[Séparer train, validation, test]
+  C --> D[Fit preprocessing sur train]
+  D --> E[Entraîner et choisir sur validation]
+  E --> F[Évaluer une fois sur test]
+  F --> G[Déployer et surveiller]
+  G -- nouvelles données ou erreurs --> B
 ```
 
 ## Activité
@@ -28,7 +30,8 @@ flowchart LR
 1. Suivre [le guide d’installation](../../docs/getting-started.md).
 2. Cloner le dépôt et créer une branche d’essai.
 3. Ouvrir un notebook, exécuter une cellule, puis redémarrer le noyau et tout réexécuter.
-4. Noter le système d’exploitation, la version Python et si un GPU est disponible.
+4. Exécuter [Le pipeline ML : de la question à la surveillance](01_ml_pipeline.ipynb). Les deux schémas originaux montrent le cycle du projet et les rôles de train, validation et test ; l’exemple synthétique fonctionne sur CPU.
+5. Noter le système d’exploitation, la version Python et si un GPU est disponible.
 
 ## Vocabulaire et limites
 

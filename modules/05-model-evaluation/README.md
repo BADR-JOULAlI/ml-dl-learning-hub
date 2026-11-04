@@ -16,4 +16,4 @@ Le test final reste scellé jusqu’à ce que les choix soient arrêtés. `GridS
 
 ## Activité et résultat
 
-Exécuter [01_classification.ipynb](01_classification.ipynb). Comparer seuils sur un jeu de test illustratif, afficher matrice de confusion et lire des cas mal classés. Vous livrez une métrique principale justifiée, une métrique secondaire et une limite de l’expérience.
+Exécuter [01_classification.ipynb](01_classification.ipynb). Comparer les seuils sur validation, lire le schéma des folds dans train, puis afficher la matrice de confusion et les erreurs sur le test final. Vous livrez une métrique principale justifiée, une métrique secondaire et une limite de l’expérience.

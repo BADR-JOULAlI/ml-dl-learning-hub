@@ -4,6 +4,7 @@ Une figure répond à une question précise. Avant de regarder un graphe, nommez
 
 | Notion | Figure utile | Ce qu’il faut lire | Limite à mentionner |
 |---|---|---|---|
+| Pipeline ML de bout en bout | Cycle cadrage → données → split → préparation → entraînement → test → service → surveillance | Quelles étapes apprennent des paramètres, et quelles données peuvent y entrer ? | Le schéma n'est pas un programme unique ; un `Pipeline` scikit-learn n'automatise ni collecte ni monitoring. |
 | Broadcasting et produit matriciel | Grille de valeurs et formes `(n,p)` | Quelle dimension correspond aux observations ? | Deux formes compatibles ne rendent pas l’opération pertinente. |
 | Gradient descent | Loss selon les epochs ou trajectoire des paramètres | Le pas converge-t-il, oscille-t-il ou diverge-t-il ? | La loss train ne mesure pas la généralisation. |
 | Preprocessing | Distribution avant/après et parts manquantes | Qu’a modifié l’imputation ou le scaling ? | Une figure descriptive sur test ne doit pas servir à ajuster la transformation. |
@@ -15,7 +16,7 @@ Une figure répond à une question précise. Avant de regarder un graphe, nommez
 | TF-IDF | Heatmap documents × termes | Quels termes reçoivent un poids élevé ? | Une statistique lexicale ne capture pas tout le sens. |
 | Monitoring | Distribution de référence et lot récent | Le profil des entrées a-t-il changé ? | Data drift n’est pas automatiquement model drift. |
 
-Les exemples sont originaux et générés à l’exécution avec Matplotlib. Les notebooks utilisent des jeux intégrés, synthétiques ou téléchargés à l’exécution selon leur notice. Évitez les captures d’écran fixes : un apprenant doit pouvoir changer un paramètre et reproduire la figure.
+Les exemples sont originaux : les notebooks génèrent leurs figures avec Matplotlib et le schéma général est un SVG éditable. Les notebooks utilisent des jeux intégrés, synthétiques ou téléchargés à l’exécution selon leur notice. Évitez les captures d’écran fixes : un apprenant doit pouvoir changer un paramètre et reproduire la figure.
 
 ## Rituel d’étude
 

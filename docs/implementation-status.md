@@ -5,7 +5,7 @@ Mis à jour le 4 novembre 2026.
 ## Parcours disponible
 
 - Documentation de démarrage, prérequis, feuille de route, références, contributions et installation.
-- Modules 00 à 05 : cours, notebooks principaux, exercices et quiz pour le parcours débutant/intermédiaire.
+- Modules 00 à 05 : cours, notebooks principaux, exercices et quiz pour le parcours débutant/intermédiaire. Le module 00 contient un notebook de pipeline ML complet avec schémas originaux et données synthétiques.
 - Modules 06 à 09 : notebooks enrichis sur rétropropagation NumPy, entraînement PyTorch, CNN et TF-IDF. Les modules 02 à 04 incluent algèbre/probabilité, audit de données, classification logistique NumPy, K-Means, DBSCAN et PCA.
 - Modules 10 à 12 : briefs de projets, un projet prix complet, un parcours churn avec entraînement, deux notebooks d’analyse tabulaire, une activité CNN, une activité sentiment, un notebook MLOps local sur les expériences et la dérive des entrées, et un projet FastAPI sérialisable avec Dockerfile et MLflow local optionnel.
 - Modules 00 à 05 : exercices Easy/Medium/Hard et notebooks de correction séparés. Les modules avancés ont leurs propositions d’exercices, mais leurs notebooks d’exercices et corrections ne sont pas encore produits.
@@ -14,7 +14,7 @@ Mis à jour le 4 novembre 2026.
 
 ## Exécution vérifiée le 4 novembre 2026
 
-La commande `python scripts/validate_notebooks.py --execute` a exécuté **28 notebooks sur 28**, de la première à la dernière cellule, avec Python 3.12 sur CPU sous Windows. Le total inclut les deux TP NLP historiques, les notebooks d’exercices et solutions, les projets tabulaires et le notebook MLOps. Cette commande exécute sans écrire dans les fichiers. Chaque notebook contient au moins une visualisation calculée par le code ; les figures explicatives reposant sur des données synthétiques ou intégrées sont enregistrées dans les `.ipynb` et visibles directement sur GitHub. Pour les reproduire, utiliser `python scripts/validate_notebooks.py --execute --save-figures`. Cette option conserve les figures et retire les sorties texte ; les sorties texte et les figures fondées sur Reuters sont supprimées avant publication. Les **103 liens Markdown locaux** ont été vérifiés.
+La commande `python scripts/validate_notebooks.py --execute` a exécuté **29 notebooks sur 29**, de la première à la dernière cellule, avec Python 3.12 sur CPU sous Windows. Le total inclut le pipeline ML illustré du module 00, les deux TP NLP historiques, les notebooks d’exercices et solutions, les projets tabulaires et le notebook MLOps. Cette commande exécute sans écrire dans les fichiers. Chaque notebook contient au moins une visualisation calculée par le code ; **69 figures explicatives** reposant sur des données synthétiques ou intégrées sont enregistrées dans les `.ipynb` et visibles directement sur GitHub. Le schéma SVG général est aussi affiché dans le README. Pour reproduire les figures des notebooks, utiliser `python scripts/validate_notebooks.py --execute --save-figures`. Cette option conserve les figures et retire les sorties texte ; les sorties texte et les figures fondées sur Reuters sont supprimées avant publication. Les **110 liens Markdown locaux** ont été vérifiés.
 
 Les gros modèles Word2Vec, GloVe et FastText des TP historiques restent des cellules volontairement commentées : leurs téléchargements et leurs résultats ne sont pas couverts par cette exécution. Le chemin MLflow optionnel et l’image Docker restent à vérifier dans un environnement propre avec les services nécessaires.
 

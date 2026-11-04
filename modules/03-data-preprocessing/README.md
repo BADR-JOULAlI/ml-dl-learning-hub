@@ -18,7 +18,7 @@ Une transformation ajustée est un modèle lui aussi : la médiane, l’échelle
 4. Comparer `SimpleImputer`, `StandardScaler`, `OneHotEncoder` et les modèles dans un pipeline.
 5. Documenter toutes les colonnes exclues et pourquoi.
 
-Exécuter [01_pipeline_sans_fuite.ipynb](01_pipeline_sans_fuite.ipynb) et [02_quality_and_features.ipynb](02_quality_and_features.ipynb), puis [l’exercice sur le preprocessing](../../exercises/intermediate/03_preprocessing.md).
+Exécuter [01_pipeline_sans_fuite.ipynb](01_pipeline_sans_fuite.ipynb) et [02_quality_and_features.ipynb](02_quality_and_features.ipynb), puis [l’exercice sur le preprocessing](../../exercises/intermediate/03_preprocessing.md). Le premier notebook montre en schéma comment une pipeline apprend ses statistiques sur train, puis réutilise ces paramètres pour validation, test et inférence.
 
 ## Résultat et pièges
 
