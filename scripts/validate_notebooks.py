@@ -8,13 +8,13 @@ from pathlib import Path
 
 import nbformat
 
-
 ROOT = Path(__file__).resolve().parents[1]
 
 
 def notebook_paths() -> list[Path]:
     return sorted(
         [
+            *ROOT.glob("*.ipynb"),
             *ROOT.glob("modules/**/*.ipynb"),
             *ROOT.glob("exercises/**/*.ipynb"),
             *ROOT.glob("projects/**/*.ipynb"),
@@ -48,7 +48,11 @@ def validate(execute: bool, selected: list[str] | None = None) -> None:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--execute", action="store_true", help="Run code cells in a temporary kernel")
-    parser.add_argument("--path", action="append", help="Validate only this repo-relative notebook (repeatable)")
+    parser.add_argument(
+        "--execute", action="store_true", help="Run code cells in a temporary kernel"
+    )
+    parser.add_argument(
+        "--path", action="append", help="Validate only this repo-relative notebook (repeatable)"
+    )
     args = parser.parse_args()
     validate(args.execute, args.path)

@@ -7,7 +7,6 @@ import re
 from pathlib import Path
 from urllib.parse import unquote, urlparse
 
-
 ROOT = Path(__file__).resolve().parents[1]
 LINK_PATTERN = re.compile(r"(?<!!)\[[^\]]*\]\(([^)\s]+)(?:\s+[^)]*)?\)")
 
@@ -21,7 +20,9 @@ def sources() -> list[tuple[Path, str]]:
         if ".git" in path.parts or ".venv" in path.parts:
             continue
         notebook = json.loads(path.read_text(encoding="utf-8"))
-        markdown = "\n".join("".join(cell["source"]) for cell in notebook["cells"] if cell["cell_type"] == "markdown")
+        markdown = "\n".join(
+            "".join(cell["source"]) for cell in notebook["cells"] if cell["cell_type"] == "markdown"
+        )
         entries.append((path, markdown))
     return entries
 

@@ -14,6 +14,8 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: python -m pip install -e ".[dev]"
-      - run: ruff check src tests
-      - run: ruff format --check src tests
+      - run: ruff check src tests scripts
+      - run: ruff format --check src tests scripts
+      - run: python scripts/validate_notebooks.py
+      - run: python scripts/validate_links.py
       - run: python -m pytest

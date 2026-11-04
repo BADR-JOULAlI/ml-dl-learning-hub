@@ -26,11 +26,11 @@ Chaque bloc ci-dessous peut être copié dans une issue GitHub. Priorité recomm
 
 **Critères d’acceptation :** expliquer token ids, embeddings, position, Q/K/V, masque et logits ; afficher les shapes ; comparer un baseline TF-IDF à un modèle léger accessible sans compte payant ; noter licence du corpus et modèle ; évaluer les erreurs, latence et empreinte mémoire.
 
-## [P2] Ajouter clustering, PCA et boosting comme expériences exécutables
+## [P2] Ajouter une comparaison Random Forest et Gradient Boosting
 
-**Contexte :** les méthodes figurent dans les notions du module 04, mais le notebook de classification supplémentaire approfondit surtout les frontières supervisées.
+**Contexte :** le module 04 couvre maintenant K-Means, DBSCAN et PCA dans un notebook exécutable. Random Forest et Gradient Boosting figurent dans le cours, mais ne disposent pas encore d’une expérience dédiée avec validation croisée et analyse d’erreurs.
 
-**Critères d’acceptation :** notebook qui compare K-Means et DBSCAN avec une visualisation, standardisation ajustée correctement, silhouette ou limite pertinente, puis PCA avec variance expliquée ; compléter par une comparaison Random Forest/Gradient Boosting avec validation croisée.
+**Critères d’acceptation :** notebook qui compare Random Forest et Gradient Boosting à une baseline simple, avec même split, validation croisée sur train, visualisation des erreurs, coût d’entraînement/inférence et limites des importances de variables.
 
 ## [P3] Exécuter les notebooks dans CI avec groupes ciblés
 

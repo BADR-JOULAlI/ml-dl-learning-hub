@@ -61,7 +61,7 @@ Les durées incluent les notebooks et exercices, pas un projet de portfolio comp
 
 ## Navigation par module
 
-Les notebooks de chaque module indiquent objectifs, intuition, équations, démonstration, interprétation, limites et exercices. Quand une section n’est pas encore développée, le statut le précise.
+Les notebooks expliquent les objectifs, l’intuition, les équations, les formes des tableaux ou tensors, puis donnent un exemple numérique, une visualisation qui explique le mécanisme, une expérience et une interprétation. Le [guide de lecture des figures](docs/pedagogie-visuelle.md) aide à relier chaque graphe à la notion étudiée. Quand une section n’est pas encore développée, le statut le précise.
 
 | Module | Sujet | Ressource principale |
 |---|---|---|
@@ -69,14 +69,14 @@ Les notebooks de chaque module indiquent objectifs, intuition, équations, démo
 | 01 | Python, NumPy, Pandas et graphiques | [Cours](modules/01-python-for-data-science/README.md) · [Notebook](modules/01-python-for-data-science/01_numpy_pandas.ipynb) |
 | 02 | Vecteurs, probabilités, dérivées, gradient descent | [Cours](modules/02-math-for-ml/README.md) · [Algèbre](modules/02-math-for-ml/02_linear_algebra_probability.ipynb) · [Gradient](modules/02-math-for-ml/01_gradient_descent.ipynb) |
 | 03 | EDA, qualité, valeurs manquantes, encodage, fuite | [Cours](modules/03-data-preprocessing/README.md) · [Pipeline](modules/03-data-preprocessing/01_pipeline_sans_fuite.ipynb) · [Qualité et features](modules/03-data-preprocessing/02_quality_and_features.ipynb) |
-| 04 | Régression, classification, modèles et frontières | [Cours](modules/04-classical-machine-learning/README.md) · [Régression](modules/04-classical-machine-learning/01_regression.ipynb) · [Classification](modules/04-classical-machine-learning/02_logistic_classification.ipynb) |
+| 04 | Régression, classification, clustering et PCA | [Cours](modules/04-classical-machine-learning/README.md) · [Régression](modules/04-classical-machine-learning/01_regression.ipynb) · [Classification](modules/04-classical-machine-learning/02_logistic_classification.ipynb) · [Non supervisé](modules/04-classical-machine-learning/03_unsupervised_clustering_pca.ipynb) |
 | 05 | Métriques, validation, erreurs | [Cours](modules/05-model-evaluation/README.md) · [Notebook](modules/05-model-evaluation/01_classification.ipynb) |
 | 06 | MLP et rétropropagation | [Cours](modules/06-neural-networks/README.md) |
 | 07 | Tensors et entraînement PyTorch | [Cours](modules/07-pytorch/README.md) |
 | 08 | CNN et vision par ordinateur | [Cours](modules/08-computer-vision/README.md) |
 | 09 | TF-IDF, sentiment et Transformers | [Cours](modules/09-nlp/README.md) |
 | 10 | Projets guidés | [Cours](modules/10-practical-projects/README.md) |
-| 11 | Expériences, API, Docker et monitoring | [Cours](modules/11-mlops/README.md) |
+| 11 | Expériences, API, Docker et monitoring | [Cours](modules/11-mlops/README.md) · [Expériences et dérive](modules/11-mlops/01_experiments_and_drift.ipynb) |
 | 12 | Projet d’équipe de bout en bout | [Brief et barème](modules/12-capstone/README.md) |
 
 ## Projets
@@ -93,7 +93,9 @@ Les exercices sont séparés des solutions et répartis par niveau sous [`exerci
 
 ## Lancer un notebook
 
-Depuis la racine du dépôt, lancer `jupyter lab`, puis ouvrir le notebook ciblé. Les chemins relatifs sont calculés depuis la racine. Les notebooks des modules 01 à 05 n’ont besoin que des dépendances de base. Les modules PyTorch nécessitent le groupe `dl`. Une alternative Colab est documentée dans le guide de chaque module ; aucun compte payant ni secret n’est requis.
+Depuis la racine du dépôt, lancer `jupyter lab`, puis ouvrir le notebook ciblé. Les chemins relatifs sont calculés depuis la racine. Les notebooks des modules 01 à 05 et le notebook MLOps local n’ont besoin que des dépendances de base. Les modules PyTorch nécessitent le groupe `dl`. Les deux TP NLP historiques nécessitent `nlp` et téléchargent des corpus NLTK, dont Reuters-21578 avec ses propres conditions d’usage. Une alternative Colab est documentée dans le guide de démarrage ; aucun compte payant ni secret n’est requis.
+
+Pour exécuter tous les notebooks depuis un terminal, installer `.[dev,dl,nlp]`, puis lancer `python scripts/validate_notebooks.py --execute`. Les sorties d’exécution ne sont pas écrites dans les fichiers `.ipynb`, notamment celles du corpus Reuters.
 
 ## Contribuer
 

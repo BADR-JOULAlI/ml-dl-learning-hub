@@ -14,7 +14,7 @@ Le coût dépend du nombre d’observations, de variables et des paramètres : K
 
 ## Mise en pratique
 
-Exécuter [01_regression.ipynb](01_regression.ipynb) et [02_logistic_classification.ipynb](02_logistic_classification.ipynb). Comparer régression maison et `LinearRegression` sur les mêmes points, puis mesurer une logistic regression NumPy et plusieurs classifieurs sur un split partagé.
+Exécuter [01_regression.ipynb](01_regression.ipynb), [02_logistic_classification.ipynb](02_logistic_classification.ipynb) et [03_unsupervised_clustering_pca.ipynb](03_unsupervised_clustering_pca.ipynb). Comparer les algorithmes faits avec NumPy et ceux de scikit-learn ; pour l’apprentissage non supervisé, observer comment l’échelle, la densité et la projection PCA modifient la lecture des groupes.
 
 ## Résultat et limites
 

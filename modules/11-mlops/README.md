@@ -10,7 +10,7 @@ Un modèle servi est une dépendance logicielle qui a besoin de son preprocessin
 
 ## Activité et statut
 
-L’exemple de bout en bout est dans [projects/end-to-end-ml](../../projects/end-to-end-ml/README.md). Démarrer par exécuter le pipeline local, tracer paramètres et scores avec MLflow, puis lancer l’API en local. Docker, CI de test API et exercice de drift complet restent à finaliser.
+Exécuter [01_experiments_and_drift.ipynb](01_experiments_and_drift.ipynb) : le notebook suit plusieurs configurations sur le train, visualise la variabilité des scores en validation croisée, recharge la pipeline depuis la mémoire et montre un décalage fabriqué des entrées. Continuer avec [projects/end-to-end-ml](../../projects/end-to-end-ml/README.md) pour l’API et le logging MLflow optionnel. Le build Docker et les contrôles de monitoring en conditions réelles restent à vérifier.
 
 ## Limites
 

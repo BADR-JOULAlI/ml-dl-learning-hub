@@ -11,3 +11,13 @@ Ces ressources ont été consultées pour concevoir un ordre d’apprentissage o
 | [DataTalksClub — MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp) | Progression tracking → pipeline → déploiement → monitoring → pratiques d’ingénierie → projet. | Aucune licence globale explicite n’a été retenue pour cette référence lors de l’inspection. Seuls l’ordre général et les thèmes sont cités ; aucun fichier ni texte n’est repris. Vérifier les notices des fichiers en amont d’une réutilisation. |
 
 Le statut de licence peut évoluer et les dépôts peuvent contenir des fichiers de tiers avec d’autres conditions. Cette page décrit l’inspection faite pour ce travail ; elle ne remplace pas les notices officielles.
+
+## Application concrète dans ce cours
+
+- Les [leçons Microsoft](https://github.com/microsoft/ML-For-Beginners) associent pratique, quiz et projet. Ici, chaque chapitre de base mène à une expérience que l’on peut modifier, puis à un exercice et une interprétation.
+- Les [notebooks de Géron](https://github.com/ageron/handson-ml3) montrent l’intérêt d’un parcours reproductible. Nos exemples fixent une graine, affichent formes et unités, séparent train/validation/test et gardent le preprocessing dans les pipelines.
+- [fastbook](https://github.com/fastai/fastbook) place tôt des expériences concrètes avant de revenir aux mécanismes. Notre CNN sur chiffres, notre exemple XOR et les figures de convolution suivent ce va-et-vient, avec des explications et des données originales.
+- Le [parcours PyTorch de Daniel Bourke](https://github.com/mrdbourke/pytorch-deep-learning) sépare tensors, workflow, classification, vision et code modulaire. Notre boucle PyTorch expose explicitement forward, loss, gradients, optimizer et évaluation, puis affiche les courbes train/validation.
+- Le [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp) enchaîne tracking, pipeline, déploiement et monitoring. Notre notebook local montre une table d’expériences, une pipeline sérialisée et la comparaison visuelle entre distribution de référence et lot récent.
+
+Les visualisations sont générées par le code du cours ; leurs titres, axes et paragraphes d’interprétation indiquent à quelle question elles répondent et ce qu’elles ne démontrent pas. Le [guide visuel](pedagogie-visuelle.md) donne la grille de lecture commune.
